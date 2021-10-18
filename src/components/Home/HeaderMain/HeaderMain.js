@@ -11,7 +11,7 @@ const HeaderMain = () => {
                 <h1><span style={{color:'#5E6061', fontWeight:'bold'}}>Experienced</span> Doctors <br/> Available For You</h1>
                 <p className='text-secondary'>Doctors, also known as physicians, are licensed health professionals who maintain and restore human health through the practice of medicine.</p>
                 <a href="#" style={{backgroundColor: '#5E6061' , fontSize:'1.2em'}} className="btn text-center"><p style={{color: 'white'}}>See More</p></a>
-            </div>
+            </div> 
         </main>
     );
 };

@@ -17,7 +17,7 @@ const ServiceDetail = () => {
         <div>
             <h1 className="text-center mt-3">Doctor's Information </h1>
             <div className="col-lg-12 col-sm-12 p-5">
-            <div className="card shadow-lg w-100 h-100 text-center rounded doctorCard">
+            <div className="card shadow-lg w-100 h-100 text-center rounded ">
                 <div className="d-flex justify-content-center align-items-center h-75 p-2" >
                     <img src={ExactIteam[0]?.imageURL} className="card-img-top h-75 w-75" alt=""/>
                 </div>

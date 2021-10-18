@@ -1,5 +1,5 @@
-.vehicleCard:hover img{
+.doctorCard:hover img{
     overflow: hidden;
     transform: scale(1.2);
-    transition: transform 1s;
+    transition: transform 2s ease-in-out;
 }

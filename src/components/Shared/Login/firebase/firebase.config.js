@@ -1,9 +1,9 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDOSK74qv7Y1TkhKYs4lS3bE8vSibzhM6U",
-    authDomain: "bootcamp-hero.firebaseapp.com",
-    projectId: "bootcamp-hero",
-    storageBucket: "bootcamp-hero.appspot.com",
-    messagingSenderId: "466643926815",
-    appId: "1:466643926815:web:357ee657231d003be23a2a"
-  };
+  apiKey: "AIzaSyBL_Id8d30GEHMuKhOhtC-vfgmY_oSNbzk",
+  authDomain: "doctors-point-39392.firebaseapp.com",
+  projectId: "doctors-point-39392",
+  storageBucket: "doctors-point-39392.appspot.com",
+  messagingSenderId: "604352522477",
+  appId: "1:604352522477:web:dc9a5c1791971187e0c4e4"
+};
   export default firebaseConfig;

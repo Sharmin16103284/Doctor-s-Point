@@ -1,32 +1,43 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import BannerImage from '../../../images/aboutImage.jpg'
+import useFirebase from '../../../hooks/useFirebase';
 
-const Login = () => {
-    const {googleSignIn} = useAuth();
+const Login = () => { 
+    const { googleSignIn } = useAuth();
+    const { loginEmailPassword, error } = useFirebase(); 
+ 
+
     return (
         <div className=" container">
-            <div className="row align-items-center" style={{ height: "100vh" }}>
-                <div className="col-md-6 shadow p-5">
-                    <div className="form-group">
-                        <label htmlFor="">User Name</label>
-                        <input type="text" className="form-control" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="">Password</label>
-                        <input type="password" className="form-control" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="" className="text-danger">Forgot your password?</label>
-                    </div>
-                    <div className="from-group mt-5">
-                        <button onClick={googleSignIn} className="btn btn-primary" >Google Sign in</button>
-                    </div>
-                </div>
-                <div className="col-md-6 d-none d-md-block">
-                    <img className="img-fluid" src={BannerImage} alt="" />
+            <div className="row align-items-center" style={{ height: "80vh" }}>
+                <h1 className="text-center">Sign In</h1>
+                <div className="col-md-12 shadow p-5">
+
+                    <form onSubmit={loginEmailPassword}>
+                        <div className="form-group">
+                            <label htmlFor="">User Email</label>
+                            <input  type="email" className="form-control" />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="">Password</label>
+                            <input type="password" className="form-control" />
+                        </div>
+                        
+                        <div className="from-group mt-5 ">
+                            <input onClick={loginEmailPassword} type="submit" className="btn" value="Sign In" style={{ marginRight: '5px', backgroundColor: '#5E6061', color: 'white' }} />
+                        </div> 
+
+                        <div className="text-bg-danger">{error}</div>
+                        
+                    </form>
+                    <Link to="/registration">
+                            <p>Don't have any account? Sign Up here.</p> </Link>
+                    
+                    <button onClick={googleSignIn} className="btn mt-2" style={{ backgroundColor: '#5E6061', color: 'white' }}>Google Sign in</button>
                 </div>
             </div>
+
         </div>
     );
 };

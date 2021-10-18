@@ -1,12 +1,12 @@
 import React from 'react';
-import aboutImage from '../../../images/aboutImage.jpg';
-import { useSpring, animated } from 'react-spring';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCarSide, faCity, faWarehouse } from '@fortawesome/free-solid-svg-icons';
+import aboutImage from '../../../images/about.jpg';
+import Footer from '../../Shared/Footer/Footer';
 
 const AboutCompany = () => {
     return (
-        <section className="my-5 container">
+        
+        <div>
+            <section className="my-5 container">
             
             <h1 className="text-center m-4">About Our Company</h1>
             <div className="row" >
@@ -14,12 +14,13 @@ const AboutCompany = () => {
                     <img className="img-fluid" src={aboutImage} alt="" />
                 </div>
                 <div className="col-md-12 mb-2">
-                    <h3 className="text-center">You start the engine and your adventure begins</h3>
-                    <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum suscipit quis aliquam assumenda possimus ea ipsum rerum et laudantium exercitationem voluptatem incidunt est cumque dolor commodi culpa delectus eaque ut sequi placeat, atque tempora omnis neque quod. Sequi earum odio eius quisquam voluptate architecto non dolores, corrupti hic vero repudiandae.</p>
+                    <h3 className="text-center">Providing World-class Healthcare Services and Support</h3>
+                    <p className="text-center">Find Doctor Online Appointment Booking · Patient Management Doctor Management Template · Appointment Schedule With Specialties Chat. Get online consultation with doctors who are experienced and trustworthy. Doctor appointment online, best online doctor consultation, book doctor.</p>
                 </div>
             </div>
         </section>
 
+        </div>
         
     );
 };
