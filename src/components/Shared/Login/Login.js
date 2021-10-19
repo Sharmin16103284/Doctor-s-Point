@@ -5,7 +5,7 @@ import useFirebase from '../../../hooks/useFirebase';
 
 const Login = () => { 
     const { googleSignIn } = useAuth();
-    const { loginEmailPassword, error } = useFirebase(); 
+    const { loginEmailPassword, catchEmail, catchPassword, error } = useFirebase(); 
  
 
     return (
@@ -17,15 +17,15 @@ const Login = () => {
                     <form onSubmit={loginEmailPassword}>
                         <div className="form-group">
                             <label htmlFor="">User Email</label>
-                            <input  type="email" className="form-control" />
+                            <input onBlur={catchEmail} type="email" className="form-control" />
                         </div>
                         <div className="form-group">
                             <label htmlFor="">Password</label>
-                            <input type="password" className="form-control" />
+                            <input onBlur={catchPassword} type="password" className="form-control" />
                         </div>
                         
                         <div className="from-group mt-5 ">
-                            <input onClick={loginEmailPassword} type="submit" className="btn" value="Sign In" style={{ marginRight: '5px', backgroundColor: '#5E6061', color: 'white' }} />
+                            <input type="submit" className="btn" value="Sign In" style={{ marginRight: '5px', backgroundColor: '#5E6061', color: 'white' }} />
                         </div> 
 
                         <div className="text-bg-danger">{error}</div>
