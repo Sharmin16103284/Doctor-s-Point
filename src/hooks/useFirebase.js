@@ -56,7 +56,7 @@ const useFirebase = () => {
           setError ("Password should be upper than six character");
         }
 
-        const auth = getAuth();
+        
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
@@ -77,8 +77,10 @@ const useFirebase = () => {
 
     //login (email & password)
 
-    const loginEmailPassword = (email,password) => {
-        const auth = getAuth();
+    const loginEmailPassword = e => {
+
+        e.preventDefault();
+        
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
